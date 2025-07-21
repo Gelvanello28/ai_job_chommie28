@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Job Chommie - 90% Cost Savings with Smart AI Caching | South Africa's #1 AI Job Platform</title>
+    <meta name="description" content="Revolutionary smart caching technology makes premium AI job hunting 90% cheaper. From R245/month to just R8-17/month. Join 1,500+ South Africans saving money while getting hired faster.">
+    <meta name="keywords" content="AI jobs South Africa, smart caching AI, cheap AI job search, automated job applications, Claude AI, 90% cost savings, South African employment">
+    <meta name="author" content="AI Job Chommie">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Job Chommie - 90% AI Cost Savings Through Smart Caching">
+    <meta property="og:description" content="Turn R245/month AI services into R8-17/month with revolutionary caching technology. Your competition is already using AI - don't get left behind!">
+    <meta property="og:image" content="https://aijobchommie.co.za/images/og-savings.jpg">
+    <meta property="og:url" content="https://aijobchommie.co.za">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Job Chommie">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="90% AI Cost Savings with Smart Caching">
+    <meta name="twitter:description" content="Premium AI job hunting at breakthrough prices. Smart caching saves R200+ monthly.">
+    <meta name="twitter:image" content="https://aijobchommie.co.za/images/twitter-card.jpg">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://js.paystack.co">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//api.anthropic.com">
+    
+    <!-- Critical Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Critical Inline Styles for Instant Load -->
+    <style>
+        /* Critical above-the-fold styles */
+        body{margin:0;padding:0;background:#000;color:#fff;font-family:'Exo 2',sans-serif;overflow-x:hidden}
+        .loading-screen{position:fixed;inset:0;background:radial-gradient(circle,#000428,#004e92);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column}
+        .hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative}
+        .glitch-text{font-family:'Orbitron',monospace;font-size:clamp(2rem,5vw,4rem);font-weight:900;background:linear-gradient(45deg,#00ffff,#ff00ff,#ffff00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;margin-bottom:1rem}
+        .cache-efficiency-badge{background:linear-gradient(45deg,#4caf50,#2196f3);color:#fff;padding:8px 16px;border-radius:20px;font-weight:700;display:inline-block;margin-bottom:1rem}
+    </style>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Job Chommie",
+        "description": "Smart caching AI job search platform with 90% cost savings",
+        "url": "https://aijobchommie.co.za",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Basic Plan",
+                "price": "8",
+                "priceCurrency": "ZAR",
+                "description": "Smart cached job matching with 85% savings"
+            },
+            {
+                "@type": "Offer", 
+                "name": "Premium Plan",
+                "price": "17",
+                "priceCurrency": "ZAR",
+                "description": "Full AI automation with 90% cost savings"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Smart Caching Status Bar -->
+    <div class="cache-status-bar" id="cacheStatusBar">
+        <div class="cache-container">
+            <span class="cache-indicator">
+                <span class="cache-dot" id="cacheDot"></span>
+                <span class="cache-text">🚀 SMART CACHE ACTIVE | <span id="liveEfficiency">90%</span> EFFICIENCY | R<span id="liveSavings">1,350</span> SAVED</span>
+            </span>
+            <button class="cache-close" onclick="hideCacheBar()" aria-label="Close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Initializing Smart Cache AI Systems...</div>
+            <div class="loading-metrics">
+                <div class="metric-item">
+                    <span class="metric-label">Cache Efficiency:</span>
+                    <span class="metric-value animate-number" data-target="90">0</span><span>%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Credits Saved:</span>
+                    <span class="metric-value animate-number" data-target="1350">0</span><span>/1500</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Monthly Savings:</span>
+                    <span class="metric-value">R<span class="animate-number" data-target="228">0</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-brand" onclick="navigateToPage('home')">
+                <div class="brand-logo">🤖</div>
+                <div class="brand-text">
+                    <div class="brand-name">AI JOB CHOMMIE</div>
+                    <div class="brand-tagline">90% Cost Savings</div>
+                </div>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="navigateToPage('home')" data-page="home">🏠 Home</a></li>
+                <li><a href="#" onclick="navigateToPage('about')" data-page="about">ℹ️ About</a></li>
+                <li><a href="#" onclick="navigateToPage('help')" data-page="help">❓ Help</a></li>
+                <li><a href="#" onclick="navigateToPage('contact')" data-page="contact">📞 Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-btn login-btn" onclick="navigateToPage('login')" id="loginBtn">Login</button>
+                <button class="nav-btn signup-btn primary" onclick="navigateToPage('welcome')" id="signupBtn">Get Started</button>
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <div class="user-info">
+                        <span class="user-name" id="userName">User</span>
+                        <span class="user-savings">Saved: R<span id="userSavings">1,280</span></span>
+                    </div>
+                    <button class="nav-btn logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Container -->
+    <main class="app-container" id="appContainer">
+        <!-- Dynamic page content will load here -->
+        <div id="pageContent">
+            <!-- Initial loading content -->
+            <div class="initial-content">
+                <div class="hero-placeholder">
+                    <h1>Loading AI Job Chommie...</h1>
+                    <p>Preparing your smart caching experience</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>AI Job Chommie</h3>
+                    <p>Revolutionary smart caching makes premium AI affordable for every South African job seeker.</p>
+                    <div class="footer-stats">
+                        <div class="footer-stat">💰 90% Cost Savings Achieved</div>
+                        <div class="footer-stat">⚡ 1,350+ Credits Saved Monthly</div>
+                        <div class="footer-stat">🇿🇦 1,500+ South Africans Saving</div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="navigateToPage('about')">About Smart Caching</a></li>
+                        <li><a href="#" onclick="navigateToPage('help')">How It Works</a></li>
+                        <li><a href="#" onclick="navigateToPage('contact')">Contact Support</a></li>
+                        <li><a href="#" onclick="navigateToPage('privacy')">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>admin@aijobchommie.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span>aijobchommie.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>South Africa 🇿🇦</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⚡</span>
+                            <span>Cache Systems 24/7 Online</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Launch Special</h3>
+                    <div class="launch-countdown">
+                        <div class="countdown-text">Launching July 28th, 2025!</div>
+                        <div class="countdown-timer" id="countdownTimer">
+                            <div class="time-unit">
+                                <span class="time-number" id="daysLeft">7</span>
+                                <span class="time-label">Days</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-number" id="hoursLeft">23</span>
+                                <span class="time-label">Hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="footer-cta-btn" onclick="navigateToPage('welcome')">
+                        🚀 Pre-Register Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 AI Job Chommie. Engineered for maximum efficiency and minimum cost.</p>
+                    <p>The first AI job platform designed around smart caching technology.</p>
+                    <div class="footer-badges">
+                        <span class="badge">🔒 POPIA Compliant</span>
+                        <span class="badge">⚡ 90% Cache Efficiency</span>
+                        <span class="badge">🇿🇦 Made in South Africa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Elements -->
+    <div class="floating-elements">
+        <!-- Cost Savings Indicator -->
+        <div class="savings-float" id="savingsFloat">
+            <div class="savings-content">
+                <div class="savings-icon">💰</div>
+                <div class="savings-text">
+                    <div class="savings-amount">R<span id="floatingSavings">1,280</span></div>
+                    <div class="savings-label">Saved Today</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Live Activity Feed -->
+        <div class="activity-feed" id="activityFeed">
+            <div class="activity-header">
+                <span class="activity-icon">⚡</span>
+                <span class="activity-title">Live Activity</span>
+            </div>
+            <div class="activity-list" id="activityList">
+                <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <span class="activity-text">Sarah K. saved R45 with cached CV</span>
+                    <span class="activity-time">2m ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-content payment-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">🚀 Activate Your Smart Cache AI</h2>
+                <button class="modal-close" onclick="closePaymentModal()" aria-label="Close">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="plan-selection" id="planSelection">
+                    <div class="selected-plan">
+                        <div class="plan-name">Selected: <span id="selectedPlanName">Premium Plan</span></div>
+                        <div class="plan-price">R<span id="selectedPlanPrice">17</span>/month</div>
+                    </div>
+                    
+                    <div class="savings-breakdown">
+                        <div class="breakdown-title">Your Cost Breakdown:</div>
+                        <div class="cost-comparison">
+                            <div class="cost-row old-cost">
+                                <span class="cost-label">Traditional AI Service:</span>
+                                <span class="cost-amount">R245/month</span>
+                            </div>
+                            <div class="cost-row new-cost">
+                                <span class="cost-label">With Smart Cache:</span>
+                                <span class="cost-amount">R<span id="modalNewPrice">17</span>/month</span>
+                            </div>
+                            <div class="cost-row savings-row">
+                                <span class="cost-label">You Save:</span>
+                                <span class="cost-amount highlight">R<span id="modalSavings">228</span>/month!</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee-badge">
+                        <span class="guarantee-icon">🛡️</span>
+                        <div class="guarantee-text">
+                            <strong>90% Efficiency Guarantee</strong><br>
+                            <small>If cache efficiency drops below 85%, full refund + 3 months free elsewhere!</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <div class="payment-security">
+                    <span class="security-icon">🔒</span>
+                    <span class="security-text">Secured by Paystack • South African Payment Processing</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary" onclick="closePaymentModal()">Cancel</button>
+                    <button class="modal-btn primary" onclick="processPayment()" id="paymentBtn">
+                        <span class="btn-icon">💳</span>
+                        <span class="btn-text">Secure Payment - Start Saving</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-animation">
+                <div class="success-icon">🎉</div>
+                <div class="success-text">
+                    <h2>Welcome to Smart Cache AI!</h2>
+                    <p>Your account is being set up with 90% cost savings active.</p>
+                </div>
+            </div>
+            <div class="success-stats">
+                <div class="stat-item">
+                    <span class="stat-icon">⚡</span>
+                    <span class="stat-text">Cache efficiency: 90%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">💰</span>
+                    <span class="stat-text">Monthly savings: R228</span>
+                </div>
+            </div>
+            <button class="modal-btn primary" onclick="closeSuccessModal()">
+                Continue to Dashboard
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="mobile-brand">🤖 AI Job Chommie</div>
+                <button class="mobile-nav-close" onclick="closeMobileMenu()">&times;</button>
+            </div>
+            <ul class="mobile-nav-links" id="mobileNavLinks">
+                <!-- Will be populated by JavaScript -->
+            </ul>
+            <div class="mobile-nav-actions">
+                <button class="mobile-btn login" onclick="navigateToPage('login')">Login</button>
+                <button class="mobile-btn signup" onclick="navigateToPage('welcome')">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Monitor (Development Only) -->
+    <div class="performance-monitor" id="performanceMonitor" style="display: none;">
+        <div class="perf-title">Performance</div>
+        <div class="perf-metric">FPS: <span id="fpsCounter">60</span></div>
+        <div class="perf-metric">Cache: <span id="cacheSize">15MB</span></div>
+        <div class="perf-metric">Efficiency: <span id="perfEfficiency">90%</span></div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="https://js.paystack.co/v1/inline.js" defer></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Critical Inline JavaScript -->
+    <script>
+        // Critical path JavaScript for immediate functionality
+        
+        // Global app state
+        window.AIJobChommie = {
+            currentPage: 'home',
+            isLoggedIn: false,
+            user: null,
+            cacheMetrics: {
+                efficiency: 90,
+                savings: 1350,
+                creditsUsed: 150,
+                totalCredits: 1500
+            }
+        };
+        
+        // Page templates storage
+        window.PageTemplates = {};
+        
+        // Critical functions
+        function navigateToPage(page) {
+            console.log('Navigating to:', page);
+            window.AIJobChommie.currentPage = page;
+            
+            // Update URL
+            window.history.pushState({page: page}, '', '#' + page);
+            
+            // Load page content
+            loadPageContent(page);
+            
+            // Update navigation
+            updateNavigation();
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+        
+        function loadPageContent(page) {
+            const pageContent = document.getElementById('pageContent');
+            const template = getPageTemplate(page);
+            
+            if (template) {
+                pageContent.innerHTML = template;
+                initializePage(page);
+            } else {
+                // Load default template or 404
+                pageContent.innerHTML = getPageTemplate('not-found') || '<h1>Page not found</h1>';
+            }
+        }
+        
+        function getPageTemplate(page) {
+            // Templates will be loaded by script.js
+            return window.PageTemplates[page] || '';
+        }
+        
+        function initializePage(page) {
+            // Page-specific initialization
+            switch(page) {
+                case 'home':
+                    initializeHomePage();
+                    break;
+                case 'dashboard':
+                    updateDashboardStats();
+                    break;
+            }
+        }
+        
+        function initializeHomePage() {
+            // Initialize Three.js and other home page features
+            if (typeof initThreeJS === 'function') {
+                setTimeout(initThreeJS, 100);
+            }
+        }
+        
+        function updateNavigation() {
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+            navLinks.forEach(link => {
+                const page = link.getAttribute('data-page');
+                if (page === window.AIJobChommie.currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Update login/logout state
+            updateAuthState();
+        }
+        
+        function updateAuthState() {
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const userMenu = document.getElementById('userMenu');
+            
+            if (window.AIJobChommie.isLoggedIn) {
+                loginBtn.style.display = 'none';
+                signupBtn.style.display = 'none';
+                userMenu.style.display = 'flex';
+                
+                // Update user info
+                const userName = document.getElementById('userName');
+                const userSavings = document.getElementById('userSavings');
+                if (userName) userName.textContent = window.AIJobChommie.user?.name || 'User';
+                if (userSavings) userSavings.textContent = window.AIJobChommie.cacheMetrics.savings;
+            } else {
+                loginBtn.style.display = 'inline-block';
+                signupBtn.style.display = 'inline-block';
+                userMenu.style.display = 'none';
+            }
+        }
+        
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileNavOverlay');
+            overlay.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            const overlay = document.getElementById('mobileNavOverlay');
+            overlay.classList.remove('active');
+        }
+        
+        function hideCacheBar() {
+            const cacheBar = document.getElementById('cacheStatusBar');
+            cacheBar.style.display = 'none';
+        }
+        
+        function closePaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            modal.classList.remove('active');
+        }
+        
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('active');
+            
+            // Navigate to dashboard
+            window.AIJobChommie.isLoggedIn = true;
+            window.AIJobChommie.user = { name: 'New User', email: 'user@example.com' };
+            navigateToPage('dashboard');
+        }
+        
+        function logout() {
+            window.AIJobChommie.isLoggedIn = false;
+            window.AIJobChommie.user = null;
+            navigateToPage('home');
+            showNotification('Logged out successfully', 'success');
+        }
+        
+        function showNotification(message, type = 'success') {
+            const container = document.getElementById('notificationContainer');
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            
+            const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">${icon}</span>
+                    <span class="notification-message">${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+                </div>
+            `;
+            
+            container.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+        
+        function processPayment() {
+            // This will be handled by script.js with full Paystack integration
+            if (typeof handlePaystackPayment === 'function') {
+                handlePaystackPayment();
+            } else {
+                // Fallback for testing
+                showNotification('🚀 Payment successful! Activating your Smart Cache AI...', 'success');
+                closePaymentModal();
+                
+                setTimeout(() => {
+                    const successModal = document.getElementById('successModal');
+                    successModal.classList.add('active');
+                }, 1000);
+            }
+        }
+        
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 AI Job Chommie initializing...');
+            
+            // Load initial page based on hash or default to home
+            const hash = window.location.hash.slice(1);
+            const initialPage = hash || 'home';
+            
+            // Wait for script.js to load templates
+            setTimeout(() => {
+                navigateToPage(initialPage);
+            }, 100);
+        });
+        
+        // Handle browser back/forward
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.page) {
+                navigateToPage(event.state.page);
+            }
+        });
+        
+        // Update live metrics periodically
+        setInterval(function() {
+            const efficiency = document.getElementById('liveEfficiency');
+            const savings = document.getElementById('liveSavings');
+            const floatingSavings = document.getElementById('floatingSavings');
+            
+            // Simulate small variations for "live" effect
+            const baseEfficiency = 90;
+            const baseSavings = 1350;
+            const variation = Math.floor(Math.random() * 3) - 1; // -1, 0, or 1
+            
+            if (efficiency) efficiency.textContent = Math.max(85, Math.min(95, baseEfficiency + variation));
+            if (savings) savings.textContent = Math.max(1300, baseSavings + (variation * 10));
+            if (floatingSavings) floatingSavings.textContent = Math.max(1200, baseSavings - 50 + (variation * 5));
+        }, 3000);
+    </script>
+</body>
+</html>
